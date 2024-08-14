@@ -29,7 +29,7 @@ export function Todos() {
   };
 
   const handleClear = async (id) => {
-    alert(id);
+
     try {
       const response = await fetch('http://localhost:3000/clear', {
         method: 'DELETE',
@@ -49,7 +49,7 @@ export function Todos() {
   };
 
   return (
-    <div className="todo-list" style={{'backgroundColor':'green'}}>
+    <div className="todo-list" style={{'backgroundColor':'#E2DAD6'}}>
       {todos.map(todo => (
         <div key={todo._id} className="todo-item" style={{ border: '1px solid #ddd', borderRadius: '5px', padding: '16px', marginBottom: '16px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
